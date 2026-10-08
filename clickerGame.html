@@ -75,8 +75,6 @@
     <body>
         <div class="rotating" id="recordDiv">
 
-            Song here
-
         </div>
 
         <div id="controlBar">
@@ -92,6 +90,12 @@
             playButtonObject.addEventListener('click', () =>{
                 // Put play button info here! Replace the background magenta thing!
                 document.body.style.backgroundColor = "magenta";
+            })
+
+            albumButtonObject = document.querySelector('#recordDiv')
+
+            albumButtonObject.addEventListener('click', () =>{
+                document.body.style.backgroundColor = "yellow";
             })
         </script>
     </body>
