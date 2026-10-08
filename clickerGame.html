@@ -1,0 +1,83 @@
+<html>
+    <head>
+
+        <title>Record Clicker</title>
+
+        <style>
+            body{
+                background-color: #dedede;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                
+            }
+            @-webkit-keyframes rotating {
+                from{
+                    -webkit-transfor: rotate(0deg);
+                    -o-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+                to{
+                    -webkit-transfor: rotate(360deg);
+                    -o-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
+            }
+            @keyframes rotating{
+                from{
+                    -ms-transform: rotate(0deg);
+                    -moz-transform: rotate(0deg);
+                    -webkit-transform: rotate(0deg);
+                    -o-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+                to{
+                    -ms-transform: rotate(360deg);
+                    -moz-transform: rotate(360deg);
+                    -webkit-transform: rotate(360deg);
+                    -o-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
+            }
+            .rotating{
+                -webkit-animation: 4s linear infinite;
+                -moz-animation: 4s linear infinite;
+                -ms-animation: 4s linear infinite;
+                -o-animation: 4s linear infinite;
+                animation: rotating 4s linear infinite;
+            }
+            #recordDiv{
+                background-color: blue;
+                width: 500px;
+                height: 500px;
+                margin: 100px 100px 100px 100px;
+                
+            }
+            #controlBar{
+                background-color: pink;
+                width: 900px;
+                height: 100px;
+                
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="rotating" id="recordDiv">
+
+            Song here
+
+        </div>
+
+        <div id="controlBar">
+
+            This is the control bar
+
+        </div>
+
+
+        <script>
+
+        </script>
+    </body>
+</html>
