@@ -57,6 +57,16 @@
                 background-color: pink;
                 width: 900px;
                 height: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                
+            }
+            #playButton{
+                background-color: greenyellow;
+                width: 75px;
+                height: 75px;
                 
             }
         </style>
@@ -70,14 +80,19 @@
         </div>
 
         <div id="controlBar">
-
-            This is the control bar
-
+            <div id="playButton">
+                <img src="https://cdn-icons-png.flaticon.com/512/84/84353.png" height="75px" width="75px">
+            </div>
         </div>
 
 
         <script>
+            playButtonObject = document.querySelector('#playButton')
 
+            playButtonObject.addEventListener('click', () =>{
+                // Put play button info here! Replace the background magenta thing!
+                document.body.style.backgroundColor = "magenta";
+            })
         </script>
     </body>
 </html>
