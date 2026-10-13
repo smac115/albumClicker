@@ -47,7 +47,7 @@
                 animation: rotating 4s linear infinite;
             }
             #recordDiv{
-                background-color: blue;
+                background-color: #dedede;
                 width: 500px;
                 height: 500px;
                 margin: 100px 100px 100px 100px;
@@ -74,7 +74,7 @@
     </head>
     <body>
         <div class="rotating" id="recordDiv">
-
+            <img id="albumImage" src="" height="500px" weight="500px">
         </div>
 
         <div id="controlBar">
@@ -85,18 +85,62 @@
 
 
         <script>
-            playButtonObject = document.querySelector('#playButton')
+            playButtonObject = document.querySelector('#playButton');
+            albumButtonObject = document.querySelector('#recordDiv');
 
-            playButtonObject.addEventListener('click', () =>{
-                // Put play button info here! Replace the background magenta thing!
+            image = document.getElementById("albumImage")
+
+            
+
+            const playlist = [
+                {
+                    title: "Song One",
+                    artist: "Artist One",
+                    year: 2021,
+                    audioSrc: "song1.mp3",
+                    imageSrc: ""
+                },
+                {
+                    title: "Song Two",
+                    artist: "Artist Two",
+                    year: 2022,
+                    audioSrc: "song2.mp3",
+                    imageSrc: "/Users/jadamcafee/Downloads/heartbreak_anniversary.png"
+                },
+                {
+                    title: "Song Three",
+                    artist: "Artist Three",
+                    year: 2023,
+                    audioSrc: "song3.mp3",
+                    imageSrc: "cover3.jpg"
+                }
+            ];
+
+            image.src = playlist[1]["imageSrc"]
+
+            let currentIndex = 0;
+            let currentAudio = new Audio();
+
+            function nextSong() {
+                currentIndex = (currentIndex + 1) % playlist.length;
+                const song = playlist[currentIndex];
+
+                currentAudio.pause();
+                currentAudio.src = song.audioSrc;
+                currentAudio.play();
+
+                albumButtonObject.style.backgroundImage = `url('${song.imageSrc}')`;
+                albumButtonObject.style.backgroundSize = "cover";
+                albumButtonObject.style.backgroundPosition = "center";
+            }
+
+            playButtonObject.addEventListener('click', () => {
+                // Put play button info here! Replace the background magenta thing![cite: 1]
                 document.body.style.backgroundColor = "magenta";
-            })
-
-            albumButtonObject = document.querySelector('#recordDiv')
-
-            albumButtonObject.addEventListener('click', () =>{
+            });
+            albumButtonObject.addEventListener('click', () => {
                 document.body.style.backgroundColor = "yellow";
-            })
+            });
         </script>
     </body>
 </html>
