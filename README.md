@@ -7,6 +7,6 @@ How to run:
 
 
 Contributions
-Jada --> Base model for website. Click animation. Rotation animation. Toolbar. Title Bar
-Asia --> Click tracking. Powerups. Rpm tracking
-Vidhatri --> Audio. Album Covers. Song objects
+1) Jada --> Base model for website. Click animation. Rotation animation. Toolbar. Title Bar
+2) Asia --> Click tracking. Powerups. Rpm tracking
+3) Vidhatri --> Audio. Album Covers. Song objects
